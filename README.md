@@ -1,4 +1,8 @@
 # BaiduyunSpider
+### 新版本2.x正在使用Node.js重写中，有需要的请到Release页面下载老版本。
+
+### 下面是老版本的说明
+
 包含百度云网盘爬虫、网站前后端、搜索，整套服务。http://www.githubs.cn/project/16085
 
 ![爱百应](screenshot1.png)
