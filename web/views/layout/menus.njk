@@ -1,0 +1,15 @@
+{% for menu in menus %}
+
+    <ul class="nav navbar-nav {{ menu.clazz}}">
+
+        {% for item in menu.items %}
+
+        <li class="{{ item.clazz }}">
+            <a href="{{ item.url }}">{{ item.name }}</a>
+        </li>
+
+        {% endfor %}
+    
+    </ul>
+
+{% endfor%}
