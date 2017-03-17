@@ -1,0 +1,44 @@
+#top-search-bar{border-collapse:separate;border-spacing:2px;background:#f1f1f1;border-bottom:1px solid #e5e5e5;padding:10px 0;position:relative;}
+#search-logo{height:35px;width:115px;display:block;left:10px;top:20px;position:absolute;background:url(/img/logo-bar.png)}
+#search_type{ border-bottom:1px solid #EAEAEA;}
+#search_type a{display:inline-block;line-height:40px;padding:5px;text-decoration:none;color:#777; margin-right:10px;}
+#search_type .active{border-bottom:3px solid #dd4b39;color:#dd4b39;font-weight:bold;}
+#res{color:#545454;}
+#res .g{margin-bottom:23px;margin-top:0;zoom:1;}
+a:visited{color:#61C;}
+a:link{color:#1a0dab;cursor:pointer;}
+#res .r{line-height:1.2;}
+#res h3{font-size:18px;}
+#tip{margin-top:15px;margin-bottom:20px;color:#999;font-size:13px;}
+#nav td{padding:5px;}
+.container img,._YQd,.container .action-menu{display:none;}
+body{font-family: arial,sans-serif;}
+@media (min-width:992px) {.container {margin-left:130px;}}
+.link a{color:#545454}
+@media (max-width:992px){#logo{display:none;}}
+#s-bar{border-bottom:1px solid #ebebeb;}
+#search-bar a{padding:5px 10px;margin-right:5px;}
+.filter{margin-top:10px;background:#eee;padding:3px 0;border-left:2px solid #666}
+.filter .label{color:#666}
+.filter .label:hover{color:red}
+.filter .label-success{color:#fff}
+#res .attr{margin-right:5px;}
+.icon{line-height:1.1;position:relative;top:7px;}
+.icon-16 {display:inline-block;width:26px;height:22px;
+background:url(http://s1.pan.bdstatic.com/yun-static/common-cdn/images/clouddisk-ui/sprite_list_icon.gif) 9999px 9999px no-repeat;
+background-position:-421px -83px;
+}
+.icon-16-torrent{background-position:-453px -83px;}
+.icon-16-video{background-position:-229px -83px;}
+.icon-16-pak{background-position:-357px -83px;}
+.icon-16-dir{background-position:-5px -3px;}
+.icon-16-abm{background-position:-43px -27px;}
+.icon-16-img{background-position:-5px -83px;}
+.icon-16-mic{background-position:-197px -83px;}
+.icon-16-exe{background-position:-326px -83px;}
+.icon-16-doc{background-position:-485px -83px;}
+.icon-16-other{background-position:-261px -83px;}
+.icon-16-word{background-position:-102px -83px;}
+.icon-16-xls{background-position:-133px -83px;}
+.icon-16-android{background-position:-389px -83px;}
+.icon-16-pdf{background-position:-70px -83px;}

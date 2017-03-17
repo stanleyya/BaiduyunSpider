@@ -1,5 +1,5 @@
 /*
- *--------------------------------------------     
+ *--------------------------------------------
  *
  *  本程序由 Github 中文社区发布
  *      
@@ -14,6 +14,17 @@ class SearchController {
 
     async index() {
 
+        const keyword = this.params.q;
+
+        if(!keyword) {
+
+            this.redirect('/');
+            return;
+        }
+
+        var resultModel = await this.fileService.search(keyword);
+
+        this.render();
     }
 }
 
