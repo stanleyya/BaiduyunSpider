@@ -1,4 +1,4 @@
-const ResultListModel = require('./models/base/ResultListModel');
+const ResultListModel = require('../models/base/ResultListModel');
 
 class FileService {
 
