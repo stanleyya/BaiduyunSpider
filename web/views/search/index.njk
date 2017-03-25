@@ -1,3 +1,58 @@
 <link rel="stylesheet" href="/css/search.css" />
 
 {% include "search/bar.njk" %}
+
+<div class="container">
+  <div class="row">	
+    <div id="main" class="col-md-6">
+        
+        {% include 'search/filter.njk' %}
+
+        <div id="tip">
+            找到约 {{ count }} 条结果<nobr> （用时 {{ time }}  秒）&nbsp;</nobr>
+        </div>
+        <style type="text/css">
+            .search-tip{margin-top:20px;line-height:200%;}
+            .search-tip b{color:#f00}
+        </style>
+
+        {% if error or count == 0  %}
+
+            <div class="search-tip">
+                找不到和您的查询 "<b>{{ keyword }}</b>" 相符的内容或信息。</br>
+                建议：
+                <ul style="margin-left:20px; list-style-type:disc">
+                    <li>请检查输入字词有无错误</li>
+                    <li>请尝试其他的查询词</li>
+                    <li>请改用较常见的字词</li>
+                    <li>请减少查询字词的数量</li>
+                </ul>
+            </div>
+        
+        {% else %}
+          <ul id="res">
+            {% for file in files %}
+
+              <li class="g">
+                <h3>
+                  <span class="icon icon-16"></span>
+                  <a target="_blank" href="{{ file.url }}">{{ file.title }}</a>
+                </h3>
+                <p>
+                  <span class="attr">分享时间：{{ file.time }}</span>
+                  {% if not file.isdir %}
+                    <span class="attr">大小：{{ file.size }}</span>
+                  {% endif %}
+                </p>
+              </li>
+
+            {% endfor %}
+          </ul>
+        {% endif %}
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="col-md-4 col-md-offset-1"></div>
+  </div>
+</div>

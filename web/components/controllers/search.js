@@ -26,6 +26,19 @@ class SearchController {
 
         this.render();
     }
+
+    async test() {
+
+        var resultModel = await this.fileService.test();
+
+        this.render({
+            count: resultModel.count,
+            files: resultModel.model,
+            error: resultModel.errorMessage
+        }, {
+            name: 'search/index'
+        });
+    }
 }
 
 module.exports = SearchController;

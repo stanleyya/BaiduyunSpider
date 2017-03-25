@@ -1,0 +1,35 @@
+{% set filers = [
+    { name: '视频', val: 0 },
+    { name: '图片', val: 1},
+    { name: '文档', val: 2},
+    { name: '音乐', val: 3},
+    { name: '压缩包', val: 4},
+    { name: '软件', val: 5},
+    { name: '文件夹', val: 'dir'},
+    { name: '专辑', val: 'abm'}
+] %}
+
+
+<div class="filter">
+    <ul>
+        <li>
+            <span class="label">类型：</span>
+            <a id="type-all" href="/search?q={{ $key_word }}&amp;ord={{ order }}" class="label">全部</a>
+            {% for filer in filers %}
+
+                <a id="type-{{ filer.val }}" href="/search?q={{ keyword }}&amp;ord={{ order }}&amp;type={{ filer.val }}"
+                    class="label">
+                    {{ filer.name }}
+                </a>
+            
+            {% endfor %}
+        </li>
+        <!--
+        <li>
+            <span class="label">排序：</a>
+            <a href="/search?q={$key_word|urlencode}&type={$type}&ord=time" class="label">最近分享</a>
+            <a href="/search?q={$key_word|urlencode}&type={$type}&ord=cdown" class="label">下载量</a>
+        </li>
+        -->
+    </ul>
+</div>
